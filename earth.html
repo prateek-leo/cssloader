@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background">
+        <div class="earth">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        background: url('./img/bg.jpg');
+        background-size: cover;
+        height: 100vh;
+        animation: animatebg 12s linear infinite;
+        margin: 0;
+        padding: 0;
+    }
+
+    .earth {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url('./img/earthmap.jpg');
+        border-radius: 50%;
+        box-shadow: inset 0 0 5px 5px lightslategrey;
+        animation: animatearth 5s linear infinite;
+
+    }
+
+    .earth span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border: 2px solid white;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        animation: animatespan 3s linear infinite;
+        transform: translate(-50%, -50%);
+    }
+
+    .earth span:nth-child(2) {
+        animation: animatespan 3s linear infinite;
+        animation-delay: 2s;
+    }
+
+    @keyframes animatearth {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 500px 0;
+        }
+    }
+
+    @keyframes animatebg {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 1600px 0;
+        }
+    }
+
+    @keyframes animatespan {
+        0% {
+            width: 200px;
+            height: 200px;
+            opacity: .3;
+        }
+        50% {
+            width: 400px;
+            height: 400px;
+            opacity: .6;
+        }
+        100% {
+            width: 600px;
+            height: 600px;
+            opacity: 0;
+        }
+    }
+</style>
+
+</html>
